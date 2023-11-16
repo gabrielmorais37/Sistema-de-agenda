@@ -4,8 +4,8 @@
 Este projeto foi desenvolvido como parte da disciplina de Programação Orientada a Objetos na Universidade São Francisco (Campinas, Swift), sob orientação do professor Matias. O Sistema de Agenda em Java emprega tecnologias modernas para criar uma aplicação que gerencia contatos. O propósito principal é oferecer funcionalidades de criar, ler, atualizar e excluir contatos, visando um público variado que busca uma solução organizada para gerenciar informações de contato.
 
 ## ✒️Desenvolvedores
-Gabriel Ricardo de Morais - RA: 004201901451
-Anderson Dias Duarte      - RA: 202202089
+- Gabriel Ricardo de Morais - RA: 004201901451
+- Anderson Dias Duarte      - RA: 202202089
 
 ## 🛠️Tecnologia Empregada
 O projeto foi desenvolvido em Java utilizando o framework Spring Boot para a criação de uma API REST e o Postman para realizar as chamadas. Foi utilizando um banco de dados de memória Spring Data JPA, proporcionando um ambiente ágil e eficiente para manipulação de dados.
