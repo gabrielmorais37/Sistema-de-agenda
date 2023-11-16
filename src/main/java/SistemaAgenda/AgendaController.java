@@ -1,5 +1,6 @@
 package SistemaAgenda;
 
+import java.net.URI;
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
@@ -73,14 +74,19 @@ public class AgendaController {
 
     @PostMapping("/agenda/salvarContato")
     public ResponseEntity<?> salvarAgenda(@RequestBody Agenda agenda){
-        try {
-            Agenda savedAgenda = repository.save(agenda);
-            return ResponseEntity.ok(savedAgenda);
-        } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                .body("Erro ao salvar a agenda: " + e.getMessage());
-        }
+    try {
+        Agenda savedAgenda = repository.save(agenda);
+        URI location = new URI("/agenda/salvarContato/" + savedAgenda.getId());
+        return ResponseEntity.created(location)
+            .body("Novo contato criado com sucesso! \n\n ID: " + savedAgenda.getId() +  
+                                                            "\n Nome: "+ savedAgenda.getNome() + 
+                                                            "\n Celular: " + savedAgenda.getCelular() + 
+                                                            "\n Email: " + savedAgenda.getEmail());
+    } catch (Exception e) {
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+            .body("Erro ao salvar a agenda: " + e.getMessage());
     }
+}
 
     @PutMapping("/agenda/atualizarContato/{id}")
     public ResponseEntity<?> atualizarContato(@PathVariable Long id, @RequestBody Agenda novaAgenda){
@@ -101,7 +107,9 @@ public class AgendaController {
                 }
 
                 Agenda agendaAtualizada = repository.save(agenda);
-                return ResponseEntity.ok("Contato com ID " + id + " foi atualizado!" + agendaAtualizada);
+                return ResponseEntity.ok("Contato com ID " + id + " foi atualizado! \n\n Nome: " + agendaAtualizada.getNome() + 
+                                                                                "\n Celular: " + agendaAtualizada.getCelular() + 
+                                                                                "\n Email: " + agendaAtualizada.getEmail());
             } else {
                 return ResponseEntity.status(HttpStatus.NOT_FOUND)
                     .body("O contatocom ID: '" + id + "' não foi encontrado.");
