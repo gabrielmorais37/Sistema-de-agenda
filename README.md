@@ -8,7 +8,7 @@ Este projeto foi desenvolvido como parte da disciplina de Programação Orientad
 - Anderson Dias Duarte      - RA: 202202089
 
 ## 🛠️Tecnologia Empregada
-O projeto foi desenvolvido em Java utilizando o framework Spring Boot para a criação de uma API REST e o Postman para realizar as chamadas. Foi utilizando um banco de dados de memória Spring Data JPA, proporcionando um ambiente ágil e eficiente para manipulação de dados.
+O projeto foi desenvolvido em Java utilizando o framework Spring Boot para a criação de uma API REST, juntamente ao Postman para realizar as chamadas. Foi utilizando um banco de dados de memória temporário Spring Data JPA, proporcionando um ambiente ágil e eficiente para manipulação de dados.
 
 ## 📋Descrição da Arquitetura
 A aplicação segue uma arquitetura baseada em REST com o Spring Boot. A estrutura principal consiste em um controlador (AgendaController) que gerencia as requisições HTTP para realizar operações CRUD no banco de dados. A classe Agenda representa um contato na agenda e possui campos para nome, celular e e-mail.
