@@ -21,5 +21,5 @@ public class Agenda {
     String nome;
     String celular;
     String email; 
-
+    int ativo = 1;
 }

@@ -15,8 +15,8 @@ A aplicação segue uma arquitetura baseada em REST com o Spring Boot. A estrutu
 
 ## ⚙️Funcionalidade
 CRUD (Create, Read, Update, Delete)
-- Criar Contato: Permite adicionar um novo contato à agenda.
-- Listar Contatos: Recupera todos os contatos da agenda.
+- Criar Contato: Permite adicionar um novo contato à agenda, sendo o nome, celular e email. Só é permitido criar um contato por vez. Mas tambem é possível criar contatos repetidos, pois serão diferenciados um dos outros pelo seu id, que é auto increment, onde será possível vizualiar o id no método "Listar Contatos". Por padrão, o contato é cadastrado como ativo.
+- Listar Contatos: Recupera todos os contatos da agenda, incluindo os contatos inativos. Se não haver contatos cadastrados ativos e inativos, retorna uma mensagem dizendo que a lista esta vazia.
 - Buscar por ID: Encontra um contato específico pelo seu ID.
 - Buscar por Nome: Localiza um contato pelo seu nome.
 - Atualizar Contato: Permite atualizar as informações de um contato existente.
@@ -25,7 +25,7 @@ CRUD (Create, Read, Update, Delete)
 ## 📄Documentação
 O código foi devidamente documentado utilizando comentários claros para explicar a lógica por trás de cada método e classe. Essa documentação busca facilitar a compreensão do funcionamento da aplicação.
 - Link chamada Postman: https://documenter.getpostman.com/view/31189602/2s9YXo1z4a
-- Link collection Postman para download: https://drive.google.com/file/d/1nWB84f3zBDAixxg6-RgddAkYLpAkOwb-/view?usp=sharing
+- Link collection Postman para download: https://drive.google.com/file/d/13NFyMA_fm-kw2QfyBFGr58D0Lb4b5Pdo/view?usp=sharing
 
 ## 🚀Inovação e Criatividade
 O projeto vai além do básico CRUD ao implementar uma solução completa para gerenciar contatos, oferecendo funcionalidades avançadas de busca por nome, id e a possibilidade de manipular os dados de forma eficiente.
