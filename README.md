@@ -13,7 +13,7 @@ O projeto foi desenvolvido em Java utilizando o framework Spring Boot para a cri
 ## 📋Descrição da Arquitetura
 A aplicação segue uma arquitetura baseada em REST com o Spring Boot. A estrutura principal consiste em um controlador (AgendaController) que gerencia as requisições HTTP para realizar operações CRUD no banco de dados. A classe Agenda representa um contato na agenda e possui campos para nome, celular e e-mail.
 
-## ⚙️Funcionalidade
+## ⚙️Funcionalidades
 O Sistema de Agenda utiliza o CRUD (Create, Read, Update, Delete), com as funcionalidades abaixo:
 - Criar Contato: Permite adicionar um novo contato à agenda, sendo o nome, celular e email. Só é permitido criar um contato por vez. Mas tambem é possível criar contatos repetidos, pois serão diferenciados um dos outros pelo seu id, que é auto increment, onde será possível vizualiar o id no método "Listar Contatos". Por padrão, o contato é cadastrado como ativo.
 - Listar Contatos: Recupera todos os contatos da agenda, incluindo os contatos inativos. Se não haver contatos cadastrados ativos e inativos, retorna uma mensagem dizendo que a lista esta vazia.
